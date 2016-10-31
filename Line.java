@@ -23,7 +23,9 @@ public class Line {
 
 	}
 
-	public Vector getNormal(Line l) {
+//	public Vector getNormal(Line l) {
+
+//	}
 
 }
 

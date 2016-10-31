@@ -2,12 +2,15 @@
 //My attempt at creating a vector object class
 
 public class Vector {
-	public double X = 0.0;
-	public double Y = 0.0;
+	public double X;
+	public double Y;
 	public double V;
 	public double theta = 0.0;
 
 	public Vector() {
+		X = 0;
+		Y = 0;
+		V = 0;
 	}
 
 	public Vector(double _X, double _Y) {
@@ -16,6 +19,14 @@ public class Vector {
 		V = Math.sqrt((X * X) + (Y * Y));
 		theta = Math.toDegrees(Math.atan(Y/X));
 	}
+
+	public Vector(Vector v) {
+		X = v.X;
+		Y = v.Y;
+	}
+
+	public void X(double _X) {X = _X;}
+	public void Y(double _Y) {Y = _Y;}
 
 	public double getMagnitude(Vector v) {
 		V = Math.sqrt((X * X) + (Y * Y));
@@ -49,6 +60,11 @@ public class Vector {
 		n.theta = getTheta(n);
 		return n;
 	}
+
+	public Vector scalarMultiply(double d) {
+		return new Vector(X * d, Y * d);
+	}
+
 	public static void main(String[] args) {
 		Vector v = new Vector(3, 4); 
 		System.out.print(v.X + " " + v.Y + " " + v.V + " " + v.theta);
