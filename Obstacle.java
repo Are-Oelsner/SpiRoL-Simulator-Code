@@ -31,11 +31,11 @@ public class Obstacle {
 		return points;
 	}
 
-	public Vector[] readNormals(Scanner s) {
+	public static Vector[] readNormals(Scanner s) {
 		return normals;
 	}
 
-	public Vector[] readEdges(Scanner s) {
+	public static Vector[] readEdges(Scanner s) {
 		return edges;
 	}
 

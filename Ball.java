@@ -1,6 +1,7 @@
 /** My Ball Class */
 class Ball {
 	double mass;
+        double radius;
 	double xLocation;
 	double yLocation;
 	double xVelocity;
@@ -10,7 +11,6 @@ class Ball {
 	double fGravity;
 	double fWind;
 
-	
 	public Ball(double x, double y, double vx, double vy) {
 		xLocation = x;
 		yLocation = y;
@@ -20,7 +20,6 @@ class Ball {
 
 	public void setBallState(double Mass, double x, double y, double vx, double vy) {
 		mass = Mass;
-		
 		xLocation = x;
 		yLocation = y;
 		xVelocity = vx;
